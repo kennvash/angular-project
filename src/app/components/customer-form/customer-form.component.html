@@ -1,0 +1,53 @@
+<div class="form-group">
+    <label>
+        First Name
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="customer.firstName"
+    />
+</div>
+<div class="form-group">
+    <label>
+        Last Name
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="customer.lastName"
+    />
+</div>
+<div class="form-group">
+    <label>
+        Email
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="customer.email"
+    />
+</div>
+<div class="form-group">
+    <label>
+        Address
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="customer.address"
+    />
+</div>
+<div class="form-group">
+    <label>
+        Contact Number
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="customer.contactNumber"
+    />
+</div>
+<button (click)="handleSave()" class="btn btn-success">
+    Save
+</button>

@@ -1,0 +1,9 @@
+<app-cart-item *ngFor="let cart of listOfCartItems"
+[cart]="cart"
+(deleteCartItemEvent)="handleDelete($event)">
+</app-cart-item>
+<app-cart-actions
+[listOfCartItems]="listOfCartItems"
+[customer]="customer"
+[sum]="sum"
+(clearCartEvent)="handleClearCart($event)"></app-cart-actions>

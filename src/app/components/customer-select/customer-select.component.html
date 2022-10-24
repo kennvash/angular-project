@@ -1,0 +1,8 @@
+<div class="select">      
+    <select [(ngModel)]="selectedOption" class="form-control" (change)="handleChangeOption()">
+        <option *ngFor="let cust of listOfCustomers" value={{cust.id}}>{{cust.id}} {{cust.firstName}} {{cust.lastName}}</option>
+    </select>
+    <button (click)="handleViewCart()" class="btn btn-secondary">
+        View Cart
+    </button>
+</div>

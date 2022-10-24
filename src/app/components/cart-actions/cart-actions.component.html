@@ -1,0 +1,11 @@
+<div>
+    <h5 *ngIf="sum>0">
+        Total Cost: {{sum}}
+    </h5>
+    <button *ngIf="sum>0" (click)="handleClearCart()" class="btn btn-danger">
+        Clear Cart
+    </button>
+    <button *ngIf="sum>0" class="btn btn-success">
+        Place Order
+    </button>
+</div>

@@ -1,0 +1,15 @@
+<app-item-form *ngIf="isItemFormOpen"
+(saveEvent)="handleSave($event)"
+[item]="item"
+[isItemFormOpen]="isItemFormOpen"></app-item-form>
+<app-customer-select
+[listOfCustomers]="listOfCustomers"
+(viewCartEvent)="handleViewCart($event)"
+(changeOptionEvent)="handleChangeOption($event)"></app-customer-select>
+<app-item
+*ngFor="let item of listOfItems"
+[item]="item"
+[customer]="customer"
+(deleteEvent)="handleDelete($event)"
+(editEvent)="handleEdit($event)"
+(addToCartEvent)="handleAddToCart($event)"></app-item>

@@ -1,0 +1,9 @@
+<app-customer-form *ngIf="isFormOpen"
+(saveEvent)="handleSave($event)"
+[customer]="customer"
+[isFormOpen]="isFormOpen"></app-customer-form>
+<app-customer
+*ngFor="let cust of listOfCustomers"
+[customer]="cust"
+(deleteEvent)="handleDelete($event)"
+(editEvent)="handleEdit($event)"></app-customer>

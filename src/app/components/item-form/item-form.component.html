@@ -1,0 +1,23 @@
+<div class="form-group">
+    <label>
+        Item Name
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="item.name"
+    />
+</div>
+<div class="form-group">
+    <label>
+        Item Cost
+    </label>
+    <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="item.cost"
+    />
+</div>
+<button (click)="handleSave()" class="btn btn-success">
+    Save
+</button>

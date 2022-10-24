@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <h5>
+            Item Id: {{cart.itemId}}
+        </h5>
+        <h5>
+            Quantity: {{cart.quantity}}
+        </h5>
+        <h5>
+            Cost: {{cart.cost}}
+        </h5>
+        <button (click)="handleDelete()" class="btn btn-warning">
+            Delete Item
+        </button>
+    </div>
+</div>

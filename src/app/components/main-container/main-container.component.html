@@ -1,0 +1,23 @@
+<div style="margin: 30px; border: 2px solid black;">
+    <app-list-of-items *ngIf="showItems"
+    [isItemFormOpen]="isItemFormOpen"
+    [listOfItems]="listOfItems"
+    [listOfCustomers]="listOfCustomers"
+    [listOfCartItems]="listOfCartItems"
+    (saveEvent)="handleSaveItem($event)"
+    (deleteEvent)="handleDeleteItem($event)"
+    (viewCartEvent)="handleViewCart($event)"
+    (addToCartEvent)="handleAddToCart($event)"
+    (changeOptionEvent)="handleChangeOption($event)"></app-list-of-items>
+    <app-list-of-customers *ngIf="showCustomers"
+    [isFormOpen]="isFormOpen"
+    [listOfCustomers]="listOfCustomers"
+    (saveEvent)="handleSave($event)"
+    (deleteEvent)="handleDelete($event)"></app-list-of-customers>
+    <app-list-of-cart-items *ngIf="showCartItems"
+    [listOfCartItems]="listOfCartItems"
+    [customer]="customer"
+    [sum]="sum"
+    (deleteCartItemEvent)="handleDeleteCartItem($event)"
+    (clearCartEvent)="handleClearCart($event)"></app-list-of-cart-items>
+</div>
